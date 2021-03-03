@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title></title>
+  <link rel="icon" href="plugin/index.ico">
+  <link rel="stylesheet" href="plugin/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="plugin/rolling/rolling.css">
+  <link rel="stylesheet" href="plugin/controller/style.css">
+  <script type="text/javascript" src="plugin/jquery/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="plugin/bootstrap/bootstrap.min.js"></script>
+  <!-- <script type="text/javascript" src="plugin/socket.io/socket.io.js"></script> -->
+  <script type="text/javascript" src="plugin/data/JuYuWangGuanLi_window.js"></script>
+  <script type="text/javascript" src="plugin/rolling/rolling.js"></script>
+  <script type="text/javascript" src="plugin/controller/overall.js"></script>
+</head>
+
+<body>
+  
+  <!-- 头部导航 -->
+  <div class="header">
+    <button class="set-btn btn btn-default pull-left" type="button">
+      <span class="glyphicon glyphicon-menu-hamburger"></span>
+    </button>
+    <button class="btn btn-primary pull-right" id="submit" type="button">
+      <span class="glyphicon glyphicon-ok"></span>
+    </button>
+    <button class="btn btn-primary pull-right" id="again" type="button">
+      <span class="glyphicon glyphicon-refresh"></span>
+    </button>
+    <span>理论题题库</span>
+  </div>
+
+  <!-- 侧边菜单 -->
+  <div class="set-nav">
+    <div class="topic-index">
+      <ul class="scrollbar-macosx"></ul>
+    </div>
+    <div class="btn-group btn-block">
+      <button class="btn btn-success btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"><span class="text">选择类目</span><span class="caret"></span></button>
+      <ul class="dropdown-menu btn-block" role="menu"></ul>
+    </div>
+    <div class="btn-group btn-block">
+      <button class="btn btn-success btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"><span class="text">选择题量</span><span class="caret"></span></button>
+      <ul class="dropdown-menu btn-block" role="menu"></ul>
+    </div>
+    <div class="btn-group btn-block">
+      <button class="btn btn-success btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"><span class="text">隐藏答案</span><span class="caret"></span></button>
+      <ul class="dropdown-menu btn-block" role="menu">
+        <li><a>隐藏答案</a></li>
+        <li><a>提示答案</a></li>
+      </ul>
+    </div>
+    <div class="btn-group btn-block">
+      <button class="btn btn-success btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"><span class="text">随机题目</span><span class="caret"></span></button>
+      <ul class="dropdown-menu btn-block" role="menu">
+        <li><a>顺序题库</a></li>
+        <li><a>随机题目</a></li>
+        <li><a>随机选项</a></li>
+        <li><a>全部随机</a></li>
+      </ul>
+    </div>
+    <button class="btn btn-block btn-primary" id="begin" type="button">开始答题</button>
+  </div>
+
+  <!-- 主区域 -->
+  <div class="main">
+    <div class="scrollbar-macosx">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="library-list"></div>
+            <ol class="topic-list"></ol>
+            <div class="bg"><img><img></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 提示层 -->
+  <div class="shelter"></div>
+
+  <div class="btimg">
+    <img ondragstart="return false;">
+    <div class="btnimg">
+      <span class="glyphicon glyphicon-remove"></span>
+    </div>
+  </div>
+</body>
+
+</html>
